@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Get Data from server </title>
+	
+	
+	
+	
+</head>
+<body>
+<script> 
+	
+	var 
+	
+	function loadDoc(url, callback){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			//console.log(this.readyState);
+			if(this.readyState == 4 && this.status == 200){
+				console.log(this.responseText+"er");
+			}
+		
+		};  
+		xhttp.open("GET",url,true);
+		xhttp.send();
+	
+	}
+	function populateTable(data){
+	
+		
+		console.log(data);
+		
+		
+		
+		
+	}
+	var id=2;
+	loadDoc("http://jsonplaceholder.typicode.com/posts/" +id,populateTable);
+	
+</script>
+</body>
+</html>
